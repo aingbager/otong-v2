@@ -1,26 +1,4 @@
-local config = function()
-    require("neo-tree").setup({
-      close_if_last_window = true,
-      window = {
-        width = 30,
-      },
-      buffers = {
-        follow_current_file = true,
-      },
-      filesystem = {
-        follow_current_file = true,
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-          hide_by_name = {
-            "node_modules"
-          },
-          never_show = {
-            ".DS_Store",
-            "thumbs.db"
-          },
-        },
-      },
-    })
-  end
-},
+local map=vim.api.nvim_set_keymap
+local opts={noremap=true, silent=true}
+vim.g.mapleader=' '
+map('n', '<Space>e', ':Neotree toggle<CR>', opts)

@@ -34,6 +34,7 @@ return {
 
 	{
 		"neovim/nvim-lspconfig",
+		lazy=false,
 		config = function()
 			require("configure.nvim-lspconfig")
 		end,
@@ -47,4 +48,21 @@ return {
 			require("configure.none-ls")
 			end,
 	},
+
+	----completion
+	---
+	{"hrsh7th/nvim-cmp",
+	  config = function()
+	    require("configure.nvim-cmp")
+	  end,
+	},
+
+	{"L3MON4D3/LuaSnip",
+	  dependencies= {"saadparwaiz1/cmp_luasnip",
+	    "rafamadriz/friendly-snippets",
+	  },
+	},
+
+	{"hrsh7th/cmp-nvim-lsp"},
+
 }

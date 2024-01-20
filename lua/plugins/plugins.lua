@@ -15,4 +15,24 @@ return {
       "MunifTanjim/nui.nvim",
       }
   },
+
+  ---lsp
+  ---
+  { "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end,
+  },
+
+  { "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("configure.lsp-config")
+    end,
+  },
+
+  {"neovim/nvim-lspconfig",
+    config = function()
+      require("configure.nvim-lspconfig")
+    end,
+  },
 }
